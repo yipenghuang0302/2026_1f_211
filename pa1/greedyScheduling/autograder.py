@@ -110,19 +110,19 @@ def grade_greedyScheduling( path="./", verbose=False ):
         return score
 
     if test_greedyScheduling(0,path,verbose):
-        score += 5
+        score += 4
         if test_greedyScheduling(1,path,verbose):
-            score += 5
+            score += 4
             if test_greedyScheduling(2,path,verbose):
-                score += 5
+                score += 4
                 if test_greedyScheduling(3,path,verbose):
-                    score+= 5
+                    score+= 4
                     allPass = True
                     for filenum in range(4,16):
                         generate_test ( filenum, jobs=4, maxlength=4, timeslots=16, path=path )
                         allPass &= test_greedyScheduling(filenum,path,verbose)
                     if allPass:
-                        score+=5
+                        score+=4
 
     print ("Score on greedyScheduling: {} out of 25.".format(score))
     return score
