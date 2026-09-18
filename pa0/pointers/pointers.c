@@ -60,8 +60,6 @@ int main() {
   printf("%d\n", *(array_demo+1));
   printf("%d\n", (*array_demo)+1);
 
-  exit(0);
-
   int array_size = 3;
 
   // void* return_of_malloc = malloc();
@@ -80,6 +78,8 @@ int main() {
   for (int i=0; i<array_size; i++) {
     printf("*(array+%d) = %d\n", i, *(array+i));
   }
+  
+  free(array);
 
   printf ("\n\nLESSON 6.1: 2D ARRAYS\n");
 
@@ -125,9 +125,9 @@ int main() {
     for (int j=0; j<array_size; j++) { // iterate over columns
 
       (array_2d[i])[j] = i*1000+j*10;
-      // printf("%d ",  array_2d[i][j] ); // valid array notation
-      // printf("%d ",  *(array_2d[i]+j) ); // valid pointer arithmetic on the columns followed by dereferencing
-      // printf("%d ",  (*(array_2d+i))[j] ); // valid pointer arithmetic on the rows followed by array access
+      printf("%d ",  array_2d[i][j] ); // valid array notation
+      printf("%d ",  *(array_2d[i]+j) ); // valid pointer arithmetic on the columns followed by dereferencing
+      printf("%d ",  (*(array_2d+i))[j] ); // valid pointer arithmetic on the rows followed by array access
       int i = 1;
       int j = 1;
 
@@ -141,6 +141,8 @@ int main() {
     free(array_2d[i]);
   }
   free(array_2d);
+
+  exit(0);
 
 
   printf ("\n\nLESSON 7: PASSING-BY-VALUE\n");
