@@ -124,7 +124,7 @@ def grade_greedyScheduling( path="./", verbose=False ):
                     if allPass:
                         score+=4
 
-    print ("Score on greedyScheduling: {} out of 25.".format(score))
+    print ("Score on greedyScheduling: {} out of 20.".format(score))
     return score
 
 if __name__ == '__main__':
